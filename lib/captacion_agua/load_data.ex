@@ -11,8 +11,8 @@ defmodule CaptacionAgua.LoadData do
     years = read_years(pid)
 
     list_places = for _x <- 1..19, into: [], do: read_data_place(pid, years)
-    notas = IO.read(pid, :line)
-    fuente = IO.read(pid, :line)
+    _notas = IO.read(pid, :line)
+    _fuente = IO.read(pid, :line)
     list_places
   end
 
