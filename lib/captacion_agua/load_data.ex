@@ -16,12 +16,22 @@ defmodule CaptacionAgua.LoadData do
     list_places
   end
 
+#
+# [years | places ] =
+#   "assets/captacion.dat"
+#     |> File.stream!
+#     |> Stream.with_index
+#     |> Stream.filter( fn {line, i} -> i > 4 and i < 101 end)
+#     |> Stream.map(fn {line, i} -> line end)
+#     |> Enum.take(100)
+#
+
   def read_titles(pid) do
-    _titulo1 = IO.read(pid, :line)
-    _titulo2 = IO.read(pid, :line)
+    _titulo1     = IO.read(pid, :line)
+    _titulo2     = IO.read(pid, :line)
     _descripcion = IO.read(pid, :line)
-    _unidades = IO.read(pid, :line)
-    _linea = IO.read(pid, :line)
+    _unidades    = IO.read(pid, :line)
+    _linea       = IO.read(pid, :line)
   end
 
   def read_years(pid) do
@@ -29,11 +39,11 @@ defmodule CaptacionAgua.LoadData do
   end
 
   def read_data_place(pid, years) do
-    place = load_place(pid)
-    total = load_data(pid)
+    place         = load_place(pid)
+    total         = load_data(pid)
     superficiales = load_data(pid)
-    subterraneas = load_data(pid)
-    desalacion = load_data(pid)
+    subterraneas  = load_data(pid)
+    desalacion    = load_data(pid)
     %{
       place: place,
       years: years,

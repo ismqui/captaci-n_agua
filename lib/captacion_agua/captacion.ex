@@ -1,10 +1,12 @@
 defmodule CaptacionAgua.Captacion do
 
   defstruct [
-    lugar: "",
-    superficiales: %{},
-    subterraneas:  %{},
-    desalacion:    %{},
+    place: "",
+    years: [],
+    superficiales: [],
+    subterraneas:  [],
+    desalacion:    [],
+    total:         []
   ]
 
 end
