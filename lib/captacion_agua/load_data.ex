@@ -5,12 +5,12 @@ defmodule CaptacionAgua.LoadData do
     Download.get_file(@remote_file_url, "assets/captacion.dat")
   end
 
-  def parse_data do
-    {:ok, pid} = File.open("assets/captacion.dat", [:read, :utf8])
+  def parse_data(name \\ "assets/captacion.dat") do
+    {:ok, pid} = File.open(name, [:read, :utf8])
     read_titles(pid)
     years = read_years(pid)
 
-    list_places = for _x <- 1..19, into: [], do: read_data_place(pid, years)
+    list_places = for _x <- 1..19, into: [], do: Map.merge(%CaptacionAgua.Captacion{}, read_data_place(pid, years))
     _notas = IO.read(pid, :line)
     _fuente = IO.read(pid, :line)
     list_places
