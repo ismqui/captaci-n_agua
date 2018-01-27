@@ -29,6 +29,7 @@ defmodule CaptacionAgua.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {CaptacionAgua.Application, []},
       extra_applications: [:logger]
     ]
   end
