@@ -44,7 +44,8 @@ defmodule CaptacionAgua.Mixfile do
       {:ex_doc, "~> 0.18.1", only: [:dev], runtime: false},
       {:inch_ex, "~> 0.5.6", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.8.0", only: [:dev], runtime: false},
-      {:download, path: "../../download"},
+      # {:download, path: "../../download"},
+      {:download, git: "https://github.com/ismqui/download.git"},
     ]
   end
 end
