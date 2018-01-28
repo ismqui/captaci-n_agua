@@ -1,5 +1,9 @@
 # CaptacionAgua
 
+Purpose of the app is to learn and practice Elixir, in this case the use of an
+Agent to maintain state. This state is loaded from a text file using another app
+as a dependency.
+
 **TODO: Add description**
 
 ## Installation
@@ -18,4 +22,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/captacion_agua](https://hexdocs.pm/captacion_agua).
-
