@@ -1,10 +1,13 @@
 # CaptacionAgua
 
 Purpose of the app is to learn and practice Elixir, in this case the use of an
-Agent to maintain state. This state is loaded from a text file using another app
-as a dependency.
+Agent to maintain state. This state is loaded from a text file that is download
+using another app as a dependency (:download).
 
 **TODO: Add description**
+
+* More validations on the downloaded file.
+* Maybe use stream to read the file.
 
 ## Installation
 
